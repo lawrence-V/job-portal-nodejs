@@ -12,9 +12,9 @@ export async function verifyUser(req: Request, res: Response, next: NextFunction
 
     const decoded = (await jwt.verify(token, process.env.JWT_SECRET!)) as UserPayload;
 
-    const { name, email, role } = decoded;
+    const { name, email, role, id } = decoded;
 
-    req.currentUser = { name, email, role };
+    req.currentUser = { id, name, email, role };
 
     next();
   } catch (error: any) {

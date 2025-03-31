@@ -30,7 +30,7 @@ model CandidateProfile {
    gender Gender
    phone String
    cv String
-   birthdate DateTime
+   birthdate DateTime @db.Date
    address String
    status Boolean @default(true)
    openToWork Boolean @default(true)

@@ -11,7 +11,7 @@ class Server {
   constructor() {
     this.app = express();
   }
-
+ 
   public start(): void {
     this.setupMiddleware();
     this.setupRoutes();
